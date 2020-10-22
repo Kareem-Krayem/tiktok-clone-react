@@ -3,9 +3,10 @@ import './Video.css';
 import VideoSideBar from '../VideoSideBar/VideoSideBar';
 import VideoFooter from '../VideoFooter/VideoFooter';
 
-function Video({ vid }) {
+function Video({ vid, channel, desc, song, likes, share, messages }) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
+
   const onVideoPress = () => {
     if (playing) {
       videoRef.current.pause();
@@ -15,6 +16,7 @@ function Video({ vid }) {
       setPlaying(true);
     }
   };
+
   return (
     <div className='video'>
       <video
@@ -24,8 +26,8 @@ function Video({ vid }) {
         loop
         src={vid}
       ></video>
-      <VideoSideBar />
-      <VideoFooter />
+      <VideoFooter channel={channel} description={desc} song={song} />
+      <VideoSideBar likes={likes} share={share} messages={messages} />
     </div>
   );
 }
