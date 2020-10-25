@@ -2,7 +2,7 @@
 
 This is a DEMO
 
-![Alt text](./DEMO.png?raw=true 'YOUTUBE-CLONE-REACT')
+![Alt text](./DEMO.pn?raw=true 'YOUTUBE-CLONE-REACT')
 
 # First Step
 
